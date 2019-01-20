@@ -1,0 +1,15 @@
+
+sampler2D _texture;
+
+// 출력 정보
+struct input
+{
+	float2 texCoord : texcoord0;
+};
+
+// rgba 반환
+float4 psMain(input iput) : COLOR0
+{
+	// iput.texCoord = float2(iput.texCoord.x * 2.0f, iput.texCoord.y * 2.0f);
+	return tex2D(_texture, iput.texCoord).rgba;
+}
