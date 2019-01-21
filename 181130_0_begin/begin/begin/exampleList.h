@@ -24,6 +24,7 @@
 #include "example_21.h"
 #include "example_23.h"
 #include "example_24.h"
+#include "example_25.h"
 
 #include "practice_00.h"
 #include "practice_01.h"

@@ -189,6 +189,7 @@
     <ClInclude Include="example_22.h" />
     <ClInclude Include="example_23.h" />
     <ClInclude Include="example_24.h" />
+    <ClInclude Include="example_25.h" />
     <ClInclude Include="gFunc.h" />
     <ClInclude Include="inputManager.h" />
     <ClInclude Include="iRenderable.h" />
@@ -273,6 +274,7 @@
     <ClCompile Include="example_22.cpp" />
     <ClCompile Include="example_23.cpp" />
     <ClCompile Include="example_24.cpp" />
+    <ClCompile Include="example_25.cpp" />
     <ClCompile Include="gFunc.cpp" />
     <ClCompile Include="inputManager.cpp" />
     <ClCompile Include="iWindowApplication.cpp" />

@@ -33,6 +33,8 @@ void lightBase::update(void)
 
 void lightBase::setView(D3DXMATRIXA16 & input)
 {
+	D3DXMatrixIdentity(&input);
+
 	input(0, 0) = _directionRight.x;
 	input(1, 0) = _directionRight.y;
 	input(2, 0) = _directionRight.z;

@@ -322,6 +322,9 @@
     <Filter Include="example\practice\18 - 그림자 매핑">
       <UniqueIdentifier>{0e8c8985-83fe-4814-adb7-cd6b685e1e61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="example\25 - 글로우 효과">
+      <UniqueIdentifier>{c84003dc-224d-4f27-a72a-076a5789a93a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kGlobalDefine.h">
@@ -570,6 +573,7 @@
     <ClInclude Include="example_24.h">
       <Filter>example\24 - 그림자 매핑</Filter>
     </ClInclude>
+    <ClInclude Include="example_25.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -800,6 +804,7 @@
     <ClCompile Include="example_24.cpp">
       <Filter>example\24 - 그림자 매핑</Filter>
     </ClCompile>
+    <ClCompile Include="example_25.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\texture\texture.png">
