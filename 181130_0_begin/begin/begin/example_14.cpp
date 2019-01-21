@@ -35,7 +35,7 @@ void example_14::draw(void)
 	// 영역 계산
 	_font->DrawTextA(
 		NULL, 
-		TEXT("ㅁㄴㅇㄹ"), 
+		"ㅁㄴㅇㄹ", 
 		-1, 
 		&rcText, 
 		DT_TOP | DT_LEFT | DT_CALCRECT, 
@@ -44,7 +44,7 @@ void example_14::draw(void)
 	// 출력
 	_font->DrawTextA(
 		NULL,
-		TEXT("ㅁㄴㅇㄹ"),
+		"ㅁㄴㅇㄹ",
 		-1,
 		&rcText,
 		DT_TOP | DT_LEFT,

@@ -831,11 +831,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="resource\shader\pixelShader.psh">
-      <Filter>main\resource\shader</Filter>
-    </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="resource\mesh\Elementalist\Elementalist.x">
       <Filter>main\resource\mesh\Elementalist</Filter>
     </None>

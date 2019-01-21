@@ -310,14 +310,14 @@ output vsCharacter(input iput)
 	}
 	oput.pos += mul(float4(iput.pos.xyz, 1.0f), _mWorldA[0]) * leftWeight;
 	oput.normal += mul(iput.normal, (float3x3)_mWorldA[0]) * leftWeight;
-
+	
 	oput.pos.w = 1.0f;
 	
 	float4 worldPos = oput.pos;
 	oput.pos = mul(oput.pos, _mView);
 	oput.pos = mul(oput.pos, _mProjection);
 	
-	oput.clipPos = mul(oput.pos, mLightView);
+	oput.clipPos = mul(worldPos, mLightView);
 	oput.clipPos = mul(oput.clipPos, _mProjection);
 
 	oput.normal = normalize(oput.normal);
@@ -338,12 +338,12 @@ float4 psCharacter(output iput) : COLOR0
 	float ownDepth = iput.clipPos.z / iput.clipPos.w;
 	float mapDepth = tex2D(_renderSampler, mapUV).r;
 
-	float diffuse = saturate(dot(-lightDirection.xyz, normal));
+	//float diffuse = saturate(dot(-lightDirection.xyz, normal));
 
 	float4 baseColor = tex2D(_sampler, iput.uv);
 	float4 finalColor = baseColor;
 	
-	finalColor.rgb = baseColor.rgb * diffuse;
+	//finalColor.rgb = baseColor.rgb * diffuse;
 	finalColor.rgb = finalColor.rgb + (baseColor.rgb * 0.2f);
 
 	if (mapDepth + 0.0001f < ownDepth)
