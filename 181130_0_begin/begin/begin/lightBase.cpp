@@ -10,8 +10,6 @@ lightBase::lightBase(int index) :
 	_light.Type = D3DLIGHT_DIRECTIONAL;
 	_light.Diffuse = D3DXCOLOR(COLOR_WHITE(255));
 
-	D3DXMatrixIdentity(&_mView);
-
 	setView(_mView);
 	setProjection(_mProjection);
 }

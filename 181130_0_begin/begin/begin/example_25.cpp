@@ -21,6 +21,7 @@ void example_25::init(void)
 
 	_effect = MN_SRC->getEffect("resource/effect/example_25.fx");
 	_renderTarget = createRenderTarget();
+	_renderTargetGlow = createRenderTarget();
 	_depthStensil = createDepthStensil();
 	
 	_teapot = createTeapot();
@@ -59,6 +60,7 @@ void example_25::draw(void)
 	_effect->SetTexture("_textureNormal", _textureNormal);
 
 	_effect->SetTexture("_renderTarget", _renderTarget);
+	_effect->SetTexture("_renderTargetGlow", _renderTargetGlow);
 
 	gFunc::runEffectLoop(_effect, "myTechnique", [&](int passNum)->void {
 

@@ -17,6 +17,7 @@ private :
 	LPD3DXEFFECT _effect = nullptr;
 
 	LPDIRECT3DTEXTURE9 _renderTarget = nullptr;
+	LPDIRECT3DTEXTURE9 _renderTargetGlow = nullptr;
 	LPDIRECT3DSURFACE9 _depthStensil = nullptr;
 
 	LPD3DXMESH _teapot = nullptr;

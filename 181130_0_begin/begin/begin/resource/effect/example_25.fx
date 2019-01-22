@@ -14,6 +14,7 @@ texture _texture;
 
 // ∑ª¥ı ≈∏∞Ÿ
 texture _renderTarget;
+texture _renderTargetGlow;
 
 sampler2D _samplerDiffuse = sampler_state
 {
@@ -42,8 +43,26 @@ sampler2D _sampler = sampler_state
     MipFilter = LINEAR;
 };
 
+sampler _renderSampler = sampler_state
+{
+    texture = _renderTarget;
+
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = LINEAR;
+}
+
+sampler _renderGlowSampler = sampler_state
+{
+    texture = _renderTargetGlow;
+
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    MipFilter = LINEAR;
+}
+
 // ±‚≈∏
-float4 filter[7] = {
+float4 filterH[7] = {
 	0.0f,	-3.0f,	0.0f,	1.0f / 64.0f,
 	0.0f,	-2.0f,	0.0f,	6.0f / 64.0f,
 	0.0f,	-1.0f,	0.0f,	15.0f / 64.0f,
@@ -51,6 +70,16 @@ float4 filter[7] = {
 	0.0f,	 1.0f,	0.0f,	15.0f / 64.0f,
 	0.0f,	 2.0f,	0.0f,	6.0f / 64.0f,
 	0.0f,	 3.0f,	0.0f,	1.0f / 64.0f,
+};
+
+float4 filterV[7] = {
+	-3.0f,	0.0f,	0.0f,	1.0f / 64.0f,
+	-2.0f,	0.0f,	0.0f,	6.0f / 64.0f,
+	-1.0f,	0.0f,	0.0f,	15.0f / 64.0f,
+	0.0f,	0.0f,	0.0f,	20.0f / 64.0f,
+	1.0f,	0.0f,	0.0f,	15.0f / 64.0f,
+	2.0f,	0.0f,	0.0f,	6.0f / 64.0f,
+	3.0f,	0.0f,	0.0f,	1.0f / 64.0f,
 };
 
 // IO
@@ -148,14 +177,57 @@ float4 psScreen(output oput) : COLOR
 	for(int i = 0; i < 7; ++i)
 	{
 		float2 offset = float2(
-			filter[i].x * (1.0f / 512.0f),
-			filter[i].y * (1.0f / 512.0f));
+			filterH[i].x * (1.0f / 640.0f),
+			filterH[i].y * (1.0f / 480.0f));
 
-		color += tex2D(_sampler, iput.uv + offset) * filter[i].w;
+		color += tex2D(_sampler, iput.uv + offset) * filterH[i].w;
 	}
 
 	float4 finalColor = color;
 	return finalColor;
+}
+
+// ----- pass 2 ----- // æÀ∆ƒ∞™ √ﬂ√‚
+output vsAlpha(input iput)
+{
+	output oput = (output)0;
+	oput.pos = iput.pos;
+	oput.uv = iput.uv;
+
+	return oput;
+}
+
+float4 psAlpha(output iput) : COLOR
+{
+	float4 finalColor = tex2D(_renderTarget, iput.uv);
+	return float4(finalColor.w, finalColor.w, finalColor.w, finalColor.w);
+}
+
+// ----- pass 3 ----- //  πÈø≠±§ »ø∞˙
+output vsGlow(input iput)
+{
+}
+
+float4 psGlow(output iput) : COLOR
+{
+	float glowColor = float4(1.0f, 1.0f, 1.0f, 1.0f);
+
+	for (int i = 0;i < 7; ++i)
+	{
+		float2 offsetH = float2(
+			filterH[i].x * (1.0f / 640.0f),
+			filterH[i].y * (1.0f / 480.0f));
+			
+		float2 offsetV = float2(
+			filterV[i].x * (1.0f / 640.0f),
+			filterV[i].y * (1.0f / 480.0f));
+
+		glowColor += tex2D(_renderGlowSampler, iput.uv + offsetH) * filterH[i].w;
+		glowColor += tex2D(_renderGlowSampler, iput.uv + offsetV) * filterV[i].w;
+	}
+
+	float4 diffuseColor = tex2D(_renderTarget, iput.uv);
+	return diffuseColor + (glowColor * diffuseColor) * 0.5f;
 }
 
 // ----- technique ----- //
