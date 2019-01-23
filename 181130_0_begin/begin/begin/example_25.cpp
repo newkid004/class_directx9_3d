@@ -37,11 +37,6 @@ void example_25::init(void)
 void example_25::update(void)
 {
 	direct3dApplication::update();
-}
-
-void example_25::draw(void)
-{
-	direct3dApplication::draw();
 
 	D3DXMATRIXA16 mWorld;
 	D3DXMatrixIdentity(&mWorld);
@@ -62,20 +57,12 @@ void example_25::draw(void)
 	_effect->SetTexture("_renderTarget", _renderTarget);
 	_effect->SetTexture("_renderTargetGlow", _renderTargetGlow);
 
-	gFunc::runEffectLoop(_effect, "myTechnique", [&](int passNum)->void {
+	_effect->SetFloat("_time", MN_TIME->getRunningTime());
+}
 
-		switch (passNum)
-		{
-		case 0: {
-			_teapot->DrawSubset(0);
-		} break;
-
-		case 1: {
-			_meshScreen->DrawSubset(0);
-		} break;
-		}
-		
-	});
+void example_25::draw(void)
+{
+	direct3dApplication::draw();
 }
 
 LPDIRECT3DTEXTURE9 example_25::createRenderTarget(void)

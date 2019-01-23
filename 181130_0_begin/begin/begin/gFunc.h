@@ -15,6 +15,9 @@ public :
 	static LPD3DXMESH				createMesh(int faceSize, int vertexSize, DWORD options, D3DVERTEXELEMENT9* elements);
 	static pRay						createPickRay(const POINT & clickPos);
 
+	static boundingBox				createBoundingBox(LPD3DXMESH mesh);
+	static boundingSphere			createBoundingSphere(LPD3DXMESH mesh);
+
 	// º¯È¯
 	static DWORD					float2DWORD(float input) { float* f = &input; return *((DWORD*)f); };
 

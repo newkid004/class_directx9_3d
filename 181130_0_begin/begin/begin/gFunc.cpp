@@ -38,15 +38,18 @@ void gFunc::runRenderTarget(LPDIRECT3DTEXTURE9 renderTarget, int clearOption, LP
 
 	// 렌더타겟 설정
 	LPDIRECT3DSURFACE9 targetSurface = nullptr;
-	if (SUCCEEDED(renderTarget->GetSurfaceLevel(0, &targetSurface)))
+	if (renderTarget)
 	{
-		MN_DEV->SetRenderTarget(0, targetSurface);
-		SAFE_RELEASE(targetSurface);
-	}
+		if (SUCCEEDED(renderTarget->GetSurfaceLevel(0, &targetSurface)))
+		{
+			MN_DEV->SetRenderTarget(0, targetSurface);
+			SAFE_RELEASE(targetSurface);
+		}
 
-	// 렌더타겟 초기화
-	if (clearOption)
-		MN_DEV->Clear(0, NULL, clearOption, backColor, 1, 0);
+		// 렌더타겟 초기화
+		if (clearOption)
+			MN_DEV->Clear(0, NULL, clearOption, backColor, 1, 0);
+	}
 
 	// 구문 실행
 	callback();
@@ -148,6 +151,50 @@ pRay gFunc::createPickRay(const POINT & clickPos)
 	D3DXVec3Normalize(&ray.direction, &ray.direction);
 
 	return ray;
+}
+
+boundingBox gFunc::createBoundingBox(LPD3DXMESH mesh)
+{
+	boundingBox result;
+
+	// 경계 정보 설정
+	void* vertex = nullptr;
+
+	if (SUCCEEDED(mesh->LockVertexBuffer(0, &vertex)))
+	{
+		D3DXComputeBoundingBox(
+			(D3DXVECTOR3*)vertex,
+			mesh->GetNumVertices(),
+			mesh->GetNumBytesPerVertex(),
+			&result.min,
+			&result.max);
+
+		mesh->UnlockVertexBuffer();
+	}
+
+	return result;
+}
+
+boundingSphere gFunc::createBoundingSphere(LPD3DXMESH mesh)
+{
+	boundingSphere result;
+
+	// 경계 정보 설정
+	void* vertex = nullptr;
+
+	if (SUCCEEDED(mesh->LockVertexBuffer(0, &vertex)))
+	{
+		D3DXComputeBoundingSphere(
+			(D3DXVECTOR3*)vertex,
+			mesh->GetNumVertices(),
+			mesh->GetNumBytesPerVertex(),
+			&result.center,
+			&result.radius);
+
+		mesh->UnlockVertexBuffer();
+	}
+
+	return result;
 }
 
 int gFunc::rndInt(int min, int max)

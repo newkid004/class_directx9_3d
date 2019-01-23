@@ -63,6 +63,16 @@ void baseObject::addChild(baseObject * input)
 	}
 }
 
+void baseObject::removeChild(baseObject * input)
+{
+	auto iter = std::find(_vChildren.begin(), _vChildren.end(), input);
+	if (iter != _vChildren.end())
+	{
+		input->setParent(NULL);
+		_vChildren.erase(iter);
+	}
+}
+
 void baseObject::moveX(float distance, bool isLocal)
 {
 	if (isLocal)	

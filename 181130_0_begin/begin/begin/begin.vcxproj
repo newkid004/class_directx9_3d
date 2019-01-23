@@ -158,6 +158,7 @@
     <ClInclude Include="allocateHierarchy.h" />
     <ClInclude Include="animationController.h" />
     <ClInclude Include="baseObject.h" />
+    <ClInclude Include="debugDraw.h" />
     <ClInclude Include="debugGizmo.h" />
     <ClInclude Include="debugGrid.h" />
     <ClInclude Include="c3DMatrix.h" />
@@ -190,6 +191,7 @@
     <ClInclude Include="example_23.h" />
     <ClInclude Include="example_24.h" />
     <ClInclude Include="example_25.h" />
+    <ClInclude Include="example_26.h" />
     <ClInclude Include="gFunc.h" />
     <ClInclude Include="inputManager.h" />
     <ClInclude Include="iRenderable.h" />
@@ -224,6 +226,7 @@
     <ClInclude Include="practice_15.h" />
     <ClInclude Include="practice_16.h" />
     <ClInclude Include="practice_18.h" />
+    <ClInclude Include="practice_19.h" />
     <ClInclude Include="practice_AA.h" />
     <ClInclude Include="renderObject.h" />
     <ClInclude Include="resourceManager.h" />
@@ -243,6 +246,7 @@
     <ClCompile Include="allocateHierarchy.cpp" />
     <ClCompile Include="animationController.cpp" />
     <ClCompile Include="baseObject.cpp" />
+    <ClCompile Include="debugDraw.cpp" />
     <ClCompile Include="debugGizmo.cpp" />
     <ClCompile Include="debugGrid.cpp" />
     <ClCompile Include="c3DMatrix.cpp" />
@@ -275,6 +279,7 @@
     <ClCompile Include="example_23.cpp" />
     <ClCompile Include="example_24.cpp" />
     <ClCompile Include="example_25.cpp" />
+    <ClCompile Include="example_26.cpp" />
     <ClCompile Include="gFunc.cpp" />
     <ClCompile Include="inputManager.cpp" />
     <ClCompile Include="iWindowApplication.cpp" />
@@ -303,6 +308,7 @@
     <ClCompile Include="practice_15.cpp" />
     <ClCompile Include="practice_16.cpp" />
     <ClCompile Include="practice_18.cpp" />
+    <ClCompile Include="practice_19.cpp" />
     <ClCompile Include="practice_AA.cpp" />
     <ClCompile Include="renderObject.cpp" />
     <ClCompile Include="resourceManager.cpp" />

@@ -119,6 +119,14 @@ enum class EParticleType
 	NONE
 };
 
+// 충돌 그리기 타입
+enum class EDebugDrawType
+{
+	BOX,
+	SPHERE,
+	NONE
+};
+
 // ----- struct ----- //
 
 // 정적 메쉬
@@ -138,4 +146,15 @@ struct pRay
 	D3DXVECTOR3 direction;
 };
 
-// 웨이브 사운드
+// 충돌
+struct boundingBox
+{
+	D3DXVECTOR3 min;
+	D3DXVECTOR3 max;
+};
+
+struct boundingSphere
+{
+	D3DXVECTOR3 center;
+	float radius = 0.0f;
+};

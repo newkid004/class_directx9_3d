@@ -21,6 +21,9 @@ skinnedMesh::skinnedMesh(const mParam & param) :
 	_effect = MN_SRC->getEffect(param.effectFilePath);
 	_mesh = createSkinnedMeshFromX(param.filePath);
 	_runTechnique = "myTechnique";
+
+	setBoundingBox(gFunc::createBoundingBox(_mesh));
+	setBoundingSphere(gFunc::createBoundingSphere(_mesh));
 }
 
 skinnedMesh::~skinnedMesh()

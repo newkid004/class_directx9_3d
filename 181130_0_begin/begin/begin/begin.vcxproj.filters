@@ -325,6 +325,15 @@
     <Filter Include="example\25 - 글로우 효과">
       <UniqueIdentifier>{c84003dc-224d-4f27-a72a-076a5789a93a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="example\practice\19 - 백열광 효과">
+      <UniqueIdentifier>{dca1b750-7510-409e-bcab-f63d6c881925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\26 - 충돌">
+      <UniqueIdentifier>{38708747-33f0-4f92-922e-d07c9fa24c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\debug\draw">
+      <UniqueIdentifier>{d17c535c-e7fd-4296-96e5-6419def99c34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kGlobalDefine.h">
@@ -573,7 +582,18 @@
     <ClInclude Include="example_24.h">
       <Filter>example\24 - 그림자 매핑</Filter>
     </ClInclude>
-    <ClInclude Include="example_25.h" />
+    <ClInclude Include="example_25.h">
+      <Filter>example\25 - 글로우 효과</Filter>
+    </ClInclude>
+    <ClInclude Include="practice_19.h">
+      <Filter>example\practice\19 - 백열광 효과</Filter>
+    </ClInclude>
+    <ClInclude Include="example_26.h">
+      <Filter>example\26 - 충돌</Filter>
+    </ClInclude>
+    <ClInclude Include="debugDraw.h">
+      <Filter>main\classes\global\utility\debug\draw</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="winMain.cpp">
@@ -804,7 +824,18 @@
     <ClCompile Include="example_24.cpp">
       <Filter>example\24 - 그림자 매핑</Filter>
     </ClCompile>
-    <ClCompile Include="example_25.cpp" />
+    <ClCompile Include="example_25.cpp">
+      <Filter>example\25 - 글로우 효과</Filter>
+    </ClCompile>
+    <ClCompile Include="practice_19.cpp">
+      <Filter>example\practice\19 - 백열광 효과</Filter>
+    </ClCompile>
+    <ClCompile Include="example_26.cpp">
+      <Filter>example\26 - 충돌</Filter>
+    </ClCompile>
+    <ClCompile Include="debugDraw.cpp">
+      <Filter>main\classes\global\utility\debug\draw</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\texture\texture.png">

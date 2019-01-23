@@ -22,6 +22,7 @@ public :	// interface
 
 public :
 	void addChild(baseObject* input);
+	void removeChild(baseObject* input);
 
 public :
 	// 해당 축을 기준으로 이동
