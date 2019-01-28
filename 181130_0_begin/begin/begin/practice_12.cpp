@@ -95,8 +95,11 @@ void practice_12::updateControl(void)
 		return;
 
 	// 픽킹 확인
-	pickRay::info pickInfo;
-	pickRay::chkPick(_terrain->getMesh(), &pickInfo);
+	pick::ray pickRay;
+	pick::info pickInfo;
+
+	pick::createPickRay(&pickRay);
+	pick::chkPick(&pickInfo, &pickRay, _terrain->getMesh());
 	if (!pickInfo.isHit) 
 		return;
 	
@@ -135,7 +138,7 @@ void practice_12::updateControl(void)
 
 	// ----- 수업 ----- //
 	/*/
-	D3DXVECTOR3 pickPos = pickInfo.rayOrigin + pickInfo.rayDir * pickInfo.distance;
+	D3DXVECTOR3 pickPos = pickRay.origin + pickRay.direction * pickInfo.distance;
 	_movePos.x = pickPos.x;
 	_movePos.y = pickPos.z;
 

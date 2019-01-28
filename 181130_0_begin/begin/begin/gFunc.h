@@ -1,5 +1,6 @@
 #pragma once
 #include "kGlobalDefine.h"
+#include "pickRay.h"
 
 class gFunc
 {
@@ -13,7 +14,7 @@ public :
 	static LPDIRECT3DINDEXBUFFER9	createIndexBuffer(int size, DWORD options, DWORD format);
 	static LPD3DXMESH				createMesh(int faceSize, int vertexSize, DWORD options, DWORD FVF);
 	static LPD3DXMESH				createMesh(int faceSize, int vertexSize, DWORD options, D3DVERTEXELEMENT9* elements);
-	static pRay						createPickRay(const POINT & clickPos);
+	static pick::ray				createPickRay(const POINT & clickPos);
 
 	static boundingBox				createBoundingBox(LPD3DXMESH mesh);
 	static boundingSphere			createBoundingSphere(LPD3DXMESH mesh);
@@ -24,6 +25,11 @@ public :
 	// 난수
 	static int						rndInt(int min, int max);
 	static float					rndFloat(float min, float max);
+
+	// 충돌
+	static bool						isIntersect(const boundingBox & boundA, const boundingBox & boundB);
+	static bool						isIntersect(const boundingSphere & boundA, const boundingSphere & boundB);
+	static void						obj2bound(boundingBox* outBoundingBox, objectBox* inOjbectBox);
 
 private :
 	gFunc() {};

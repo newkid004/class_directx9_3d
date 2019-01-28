@@ -7,9 +7,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 	SIZE size = { WINSIZEX, WINSIZEY };
 
 	//*/
-	example_26 exam(hInstance, size, nCmdShow);
+	example_27 exam(hInstance, size, nCmdShow);
 	/*/
-	practice_19 exam(hInstance, size, nCmdShow);
+	practice_20 exam(hInstance, size, nCmdShow);
 	//*/
 	
 	return exam.run();

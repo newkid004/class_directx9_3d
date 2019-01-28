@@ -1,65 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="main">
-      <UniqueIdentifier>{92854d2e-6fe5-40ef-b60b-9628065b429d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes">
-      <UniqueIdentifier>{cffd9ba2-4284-4e3d-90d6-a8072ab15279}</UniqueIdentifier>
-    </Filter>
     <Filter Include="example">
       <UniqueIdentifier>{a97d5158-6c85-4fc6-91c9-8fd0a985855b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global">
-      <UniqueIdentifier>{718f8f6b-c396-450f-a2fa-c0a1bc11eabe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\define">
-      <UniqueIdentifier>{0d020e1b-c572-41d2-a2a1-1a04b318d3b8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="example\_base">
       <UniqueIdentifier>{a340fa12-159a-46e6-8950-b294741461df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility">
-      <UniqueIdentifier>{920c2b8c-2ad7-48a9-a5dd-40d9e4265dff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\math">
-      <UniqueIdentifier>{72d2e760-0d7e-46fd-96c3-07d89a53005f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\interface">
-      <UniqueIdentifier>{146dd1cb-8b93-4c2a-b982-33099fd15f7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager">
-      <UniqueIdentifier>{25a43348-dc4b-4771-8789-9a73ab5f7399}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\window">
-      <UniqueIdentifier>{2fbe5327-b776-4fef-8e1b-e5bc83a68f1c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\interface\windowMessageHandler">
-      <UniqueIdentifier>{f762d8a9-5198-4a75-977b-73e765d6a789}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\device">
-      <UniqueIdentifier>{cd084fbe-d1f8-453c-a75e-51cd2736c3dc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\interface\updateable">
-      <UniqueIdentifier>{ebc7cf22-662f-4d37-9e32-47b9c3daebbb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\interface\renderable">
-      <UniqueIdentifier>{63be05f2-9bea-4358-aa8d-e66ba2479bf5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice">
-      <UniqueIdentifier>{774c6497-29ec-476b-92f5-b9bc02758aba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\00">
-      <UniqueIdentifier>{d7fd648f-1293-4452-958b-209e6286a766}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\time">
-      <UniqueIdentifier>{ae3b0c8c-0d25-4f0b-a0b4-84c8a4c5e110}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\input">
-      <UniqueIdentifier>{61c473a9-9b44-4346-9b06-ec368efb7df3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\01">
-      <UniqueIdentifier>{b8e337e6-95bf-4590-907e-eb1c8dffa71d}</UniqueIdentifier>
     </Filter>
     <Filter Include="example\01 - 벡터, 행렬">
       <UniqueIdentifier>{d369dadc-cb46-4f57-9564-ba6c73609fd2}</UniqueIdentifier>
@@ -82,6 +28,168 @@
     <Filter Include="example\07 - 카메라">
       <UniqueIdentifier>{b3ef417f-fe97-4bad-8289-eb9f93c66aa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="example\08 - 텍스쳐">
+      <UniqueIdentifier>{7c267d45-a42a-45c2-92a8-bb1924c63de9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\09 - 광원">
+      <UniqueIdentifier>{8a3def03-030f-4679-8f2a-c0483b8450fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\10 - 쉐이더">
+      <UniqueIdentifier>{393af326-77fd-4721-8194-bcdd52ee31b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\11 - 이펙트 프레임워크">
+      <UniqueIdentifier>{914141e6-4c47-4f07-b7ba-1559214a6668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\12 - 메쉬">
+      <UniqueIdentifier>{2876ba61-cccf-43df-bc9b-c9fa3f3a3c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\14 - 폰트">
+      <UniqueIdentifier>{c5140588-bb5b-4664-a21d-201aa201b526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\15 - 정적 메쉬">
+      <UniqueIdentifier>{1f637c5c-7a62-4027-b83e-a064817f4f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\16 - skinned 메쉬">
+      <UniqueIdentifier>{cd0ed7c8-489c-4bc1-9bb9-8826f8f1f30a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\13 - 알파블렌딩, 스프라이트">
+      <UniqueIdentifier>{b1330dcf-a13e-41c0-9413-562f18c12c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\17 - 지형">
+      <UniqueIdentifier>{285af633-a8ba-4e78-9081-bd2781e06a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\18 - 사운드">
+      <UniqueIdentifier>{adf8a461-df8e-4267-896f-ddba57afbdcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\19 - 파티클">
+      <UniqueIdentifier>{f10cd8f0-46ac-45f3-b002-e63bb0891292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\20 - 노말 매핑">
+      <UniqueIdentifier>{fec21cc6-2144-4d3f-9840-f8b17600257f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\21 - 환경 매핑">
+      <UniqueIdentifier>{856d1da0-aeaa-41fd-8d7b-34f9723afafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\22 - 정점 애니메이션%28렌더몽키 참조%29">
+      <UniqueIdentifier>{22f656f0-3c81-4054-8afd-a4e906457722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\23 - 외곽선추출, 양각효과">
+      <UniqueIdentifier>{eae7f007-8013-4373-b962-bc42a471c625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\24 - 그림자 매핑">
+      <UniqueIdentifier>{d441a6a6-6753-4328-ab0f-3c788f974b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\25 - 글로우 효과">
+      <UniqueIdentifier>{c84003dc-224d-4f27-a72a-076a5789a93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example\26 - 충돌">
+      <UniqueIdentifier>{38708747-33f0-4f92-922e-d07c9fa24c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice">
+      <UniqueIdentifier>{287bc891-f0c8-48fd-ac84-ee4751131d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\00">
+      <UniqueIdentifier>{d7fd648f-1293-4452-958b-209e6286a766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\01">
+      <UniqueIdentifier>{b8e337e6-95bf-4590-907e-eb1c8dffa71d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\03 - 텍스쳐 전광판">
+      <UniqueIdentifier>{f66263bf-2ee5-4c4e-8bcf-0482b9550790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\04 - 셰이딩 밀기">
+      <UniqueIdentifier>{44f0d1be-5642-43b6-9acf-51247f90d76f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\05 - 픽셀 셰이더">
+      <UniqueIdentifier>{92d26f1d-22de-4ba5-a0a6-0a4386ba22ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\06 - 메쉬">
+      <UniqueIdentifier>{5e95e3eb-f99b-458e-a46b-4cb0499ed95c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\07 - 기즈모">
+      <UniqueIdentifier>{4ef55c9a-1f0a-46fb-9247-b4c8ebdb7cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\09 - 스킨드 메쉬 애니메이션">
+      <UniqueIdentifier>{23e4dcca-7157-413e-ad4a-6b68e1ccce60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\10 - 애니메이션 블렌드">
+      <UniqueIdentifier>{f13531ac-2212-4db7-bf22-699ab44f2f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\11 - 지형">
+      <UniqueIdentifier>{d60c173b-6ef7-40d7-b1f5-7d945ef69c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\12 - 지형 걷기">
+      <UniqueIdentifier>{b23d5959-9b6c-4981-a456-5fb02ff62a7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\13 - 사운드">
+      <UniqueIdentifier>{83415299-240b-443a-9538-f052dd1180ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\15 - 매핑">
+      <UniqueIdentifier>{f489afd8-03f2-44aa-b3fb-ad0e569c60c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\16 - 스카이박스">
+      <UniqueIdentifier>{5eb69d8f-f3a5-4741-8f35-6a8f9e6ba723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\18 - 그림자 매핑">
+      <UniqueIdentifier>{0e8c8985-83fe-4814-adb7-cd6b685e1e61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\19 - 백열광 효과">
+      <UniqueIdentifier>{dca1b750-7510-409e-bcab-f63d6c881925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="practice\AA - 그림자 매핑">
+      <UniqueIdentifier>{87297e90-b934-44a1-b7b2-c3d9b5ad6578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{92854d2e-6fe5-40ef-b60b-9628065b429d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes">
+      <UniqueIdentifier>{cffd9ba2-4284-4e3d-90d6-a8072ab15279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global">
+      <UniqueIdentifier>{718f8f6b-c396-450f-a2fa-c0a1bc11eabe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\define">
+      <UniqueIdentifier>{0d020e1b-c572-41d2-a2a1-1a04b318d3b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility">
+      <UniqueIdentifier>{920c2b8c-2ad7-48a9-a5dd-40d9e4265dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\math">
+      <UniqueIdentifier>{72d2e760-0d7e-46fd-96c3-07d89a53005f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\interface">
+      <UniqueIdentifier>{146dd1cb-8b93-4c2a-b982-33099fd15f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\interface\windowMessageHandler">
+      <UniqueIdentifier>{f762d8a9-5198-4a75-977b-73e765d6a789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\interface\updateable">
+      <UniqueIdentifier>{ebc7cf22-662f-4d37-9e32-47b9c3daebbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\interface\renderable">
+      <UniqueIdentifier>{63be05f2-9bea-4358-aa8d-e66ba2479bf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager">
+      <UniqueIdentifier>{25a43348-dc4b-4771-8789-9a73ab5f7399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\window">
+      <UniqueIdentifier>{2fbe5327-b776-4fef-8e1b-e5bc83a68f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\device">
+      <UniqueIdentifier>{cd084fbe-d1f8-453c-a75e-51cd2736c3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\time">
+      <UniqueIdentifier>{ae3b0c8c-0d25-4f0b-a0b4-84c8a4c5e110}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\input">
+      <UniqueIdentifier>{61c473a9-9b44-4346-9b06-ec368efb7df3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\resource">
+      <UniqueIdentifier>{a5740d01-8e23-4862-8087-9c20ada45979}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\manager\sound">
+      <UniqueIdentifier>{363f62e9-1556-4871-b78f-93101521c8ac}</UniqueIdentifier>
+    </Filter>
     <Filter Include="main\classes\global\utility\object">
       <UniqueIdentifier>{e54f91c4-5368-4d36-b395-be408554d5e0}</UniqueIdentifier>
     </Filter>
@@ -91,110 +199,20 @@
     <Filter Include="main\classes\global\utility\object\camera">
       <UniqueIdentifier>{cc54d8c0-bc9b-4cde-9929-8070e75fb398}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global\utility\application">
-      <UniqueIdentifier>{aaa45c42-ba43-4d2a-b90f-10ebfb840758}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\application\windowApplication">
-      <UniqueIdentifier>{96c4a580-42da-462a-b7f2-fcc1b2427dfa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\application\direct3dApplication">
-      <UniqueIdentifier>{322028d2-795e-4bcb-9a16-0d8373156d41}</UniqueIdentifier>
-    </Filter>
     <Filter Include="main\classes\global\utility\object\camera\_base">
       <UniqueIdentifier>{c1fe18f2-c92e-4f7e-adbf-3d3d173fb1fc}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\camera\controlable">
       <UniqueIdentifier>{23136035-e0e4-4ba6-b187-2c73713fee05}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\08 - 텍스쳐">
-      <UniqueIdentifier>{7c267d45-a42a-45c2-92a8-bb1924c63de9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\03 - 텍스쳐 전광판">
-      <UniqueIdentifier>{f66263bf-2ee5-4c4e-8bcf-0482b9550790}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\09 - 광원">
-      <UniqueIdentifier>{8a3def03-030f-4679-8f2a-c0483b8450fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\04 - 셰이딩 밀기">
-      <UniqueIdentifier>{44f0d1be-5642-43b6-9acf-51247f90d76f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\10 - 쉐이더">
-      <UniqueIdentifier>{393af326-77fd-4721-8194-bcdd52ee31b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource">
-      <UniqueIdentifier>{a0a9849d-63ff-45ae-bb96-70973fb49830}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\shader">
-      <UniqueIdentifier>{73701b02-ea91-413f-9016-9466a591230c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\texture">
-      <UniqueIdentifier>{1184cecc-6a22-42f5-bddc-549939ee41dc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\05 - 픽셀 셰이더">
-      <UniqueIdentifier>{92d26f1d-22de-4ba5-a0a6-0a4386ba22ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\11 - 이펙트 프레임워크">
-      <UniqueIdentifier>{914141e6-4c47-4f07-b7ba-1559214a6668}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\effect">
-      <UniqueIdentifier>{3d5b0a02-e121-4c8b-8604-0d96aaf5a887}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\12 - 메쉬">
-      <UniqueIdentifier>{2876ba61-cccf-43df-bc9b-c9fa3f3a3c71}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\06 - 메쉬">
-      <UniqueIdentifier>{5e95e3eb-f99b-458e-a46b-4cb0499ed95c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\function">
-      <UniqueIdentifier>{c5f5c382-b720-46e6-8e97-1491b154f35f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\function\gFunc">
-      <UniqueIdentifier>{ebc08e9b-6a9f-4c92-af0c-d0d3605c9ec7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\14 - 폰트">
-      <UniqueIdentifier>{c5140588-bb5b-4664-a21d-201aa201b526}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\resource">
-      <UniqueIdentifier>{a5740d01-8e23-4862-8087-9c20ada45979}</UniqueIdentifier>
-    </Filter>
     <Filter Include="main\classes\global\utility\object\renderObject">
       <UniqueIdentifier>{b7ec8121-1b3b-43f3-8cff-182d257869c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\debug">
-      <UniqueIdentifier>{254f444e-f902-44c6-a0e7-a996a260fb44}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\debug\grid">
-      <UniqueIdentifier>{d7eb0c14-604b-4b4e-bde8-e569adc59943}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\07 - 기즈모">
-      <UniqueIdentifier>{4ef55c9a-1f0a-46fb-9247-b4c8ebdb7cb7}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\renderObject\_base">
       <UniqueIdentifier>{9a569ac4-8b69-4bcd-8eef-299cfc3f5e3d}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\renderObject\defaulteCube">
       <UniqueIdentifier>{3cf1eab9-ef9c-4fc1-a881-8adfff9c1777}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\mesh">
-      <UniqueIdentifier>{4dd65e64-3571-4625-8c73-b035a69efb6a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\mesh\Elementalist">
-      <UniqueIdentifier>{fd0c8f1b-4ab7-4eb0-ac70-8a48e26de59a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\15 - 정적 메쉬">
-      <UniqueIdentifier>{1f637c5c-7a62-4027-b83e-a064817f4f8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\16 - skinned 메쉬">
-      <UniqueIdentifier>{cd0ed7c8-489c-4bc1-9bb9-8826f8f1f30a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\resource\mesh\WitchApprentice">
-      <UniqueIdentifier>{bdf700df-cf18-46ba-8d81-cf685e238ab4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\animation">
-      <UniqueIdentifier>{91a124ae-4303-424d-bbdf-41e599aa3b3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\animation\allocateHierarchy">
-      <UniqueIdentifier>{7d36d6a7-c56c-465c-84b4-38ae24247fb1}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\renderObject\mesh">
       <UniqueIdentifier>{8943f845-6357-4734-bd3e-7b89b2a4af96}</UniqueIdentifier>
@@ -205,11 +223,17 @@
     <Filter Include="main\classes\global\utility\object\renderObject\mesh\staticMesh">
       <UniqueIdentifier>{f967d52d-ec32-4984-986f-ed5ff4e7bc3b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\09 - 스킨드 메쉬 애니메이션">
-      <UniqueIdentifier>{23e4dcca-7157-413e-ad4a-6b68e1ccce60}</UniqueIdentifier>
+    <Filter Include="main\classes\global\utility\object\renderObject\particle">
+      <UniqueIdentifier>{9162e83b-c19f-4257-b1df-03f651f01ed7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\10 - 애니메이션 블렌드">
-      <UniqueIdentifier>{f13531ac-2212-4db7-bf22-699ab44f2f6b}</UniqueIdentifier>
+    <Filter Include="main\classes\global\utility\object\renderObject\particle\point">
+      <UniqueIdentifier>{0a52e2b5-16bd-4224-a642-9c8e4fa109bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\object\renderObject\particle\quad">
+      <UniqueIdentifier>{f456b018-617e-4b5b-950e-4dccc5e7473f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\object\renderObject\skyBox">
+      <UniqueIdentifier>{024ce915-9c32-4952-bb4e-bb24a2e86d9a}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\light">
       <UniqueIdentifier>{a6f4f35c-5956-4ab6-96e1-b0aeb8e7f42f}</UniqueIdentifier>
@@ -219,18 +243,6 @@
     </Filter>
     <Filter Include="main\classes\global\utility\object\UI">
       <UniqueIdentifier>{b58d0158-5f37-4570-a2f1-e009c1df003f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\13 - 알파블렌딩, 스프라이트">
-      <UniqueIdentifier>{b1330dcf-a13e-41c0-9413-562f18c12c57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\debug\gizmo">
-      <UniqueIdentifier>{1c2a5fc5-6235-4859-b849-d6991ce33dba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\17 - 지형">
-      <UniqueIdentifier>{285af633-a8ba-4e78-9081-bd2781e06a13}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\11 - 지형">
-      <UniqueIdentifier>{d60c173b-6ef7-40d7-b1f5-7d945ef69c1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\object\UI\_base">
       <UniqueIdentifier>{50bf94f7-5438-4a9a-adfa-dcc9e6a21de9}</UniqueIdentifier>
@@ -250,26 +262,35 @@
     <Filter Include="main\classes\global\utility\object\terrian">
       <UniqueIdentifier>{0ad79c50-7cb6-49b9-b1e9-1e99cffbf086}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\12 - 지형 걷기">
-      <UniqueIdentifier>{b23d5959-9b6c-4981-a456-5fb02ff62a7e}</UniqueIdentifier>
+    <Filter Include="main\classes\global\utility\application">
+      <UniqueIdentifier>{aaa45c42-ba43-4d2a-b90f-10ebfb840758}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global\function\pickRay">
-      <UniqueIdentifier>{9733b38e-4c85-433b-95b2-5108ca373e44}</UniqueIdentifier>
+    <Filter Include="main\classes\global\utility\application\windowApplication">
+      <UniqueIdentifier>{96c4a580-42da-462a-b7f2-fcc1b2427dfa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\18 - 사운드">
-      <UniqueIdentifier>{adf8a461-df8e-4267-896f-ddba57afbdcb}</UniqueIdentifier>
+    <Filter Include="main\classes\global\utility\application\direct3dApplication">
+      <UniqueIdentifier>{322028d2-795e-4bcb-9a16-0d8373156d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\debug">
+      <UniqueIdentifier>{254f444e-f902-44c6-a0e7-a996a260fb44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\debug\grid">
+      <UniqueIdentifier>{d7eb0c14-604b-4b4e-bde8-e569adc59943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\debug\gizmo">
+      <UniqueIdentifier>{1c2a5fc5-6235-4859-b849-d6991ce33dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\debug\draw">
+      <UniqueIdentifier>{d17c535c-e7fd-4296-96e5-6419def99c34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\animation">
+      <UniqueIdentifier>{91a124ae-4303-424d-bbdf-41e599aa3b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\classes\global\utility\animation\allocateHierarchy">
+      <UniqueIdentifier>{7d36d6a7-c56c-465c-84b4-38ae24247fb1}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\sound">
       <UniqueIdentifier>{b470d671-b6a8-4f18-b6d9-f20e5ad0f98e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\manager\sound">
-      <UniqueIdentifier>{363f62e9-1556-4871-b78f-93101521c8ac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\13 - 사운드">
-      <UniqueIdentifier>{83415299-240b-443a-9538-f052dd1180ef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\19 - 파티클">
-      <UniqueIdentifier>{f10cd8f0-46ac-45f3-b002-e63bb0891292}</UniqueIdentifier>
     </Filter>
     <Filter Include="main\classes\global\utility\particle">
       <UniqueIdentifier>{3f811457-2206-4c14-ba3a-3b91c33e02ca}</UniqueIdentifier>
@@ -280,59 +301,44 @@
     <Filter Include="main\classes\global\utility\particle\emitter">
       <UniqueIdentifier>{d8811f57-9f5f-40b0-b98a-f477405d7fe7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global\utility\object\renderObject\particle">
-      <UniqueIdentifier>{9162e83b-c19f-4257-b1df-03f651f01ed7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\object\renderObject\particle\point">
-      <UniqueIdentifier>{0a52e2b5-16bd-4224-a642-9c8e4fa109bb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="main\classes\global\utility\particle\creater">
       <UniqueIdentifier>{47b42c36-d484-4338-a394-599bcbf811df}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\15 - 매핑">
-      <UniqueIdentifier>{f489afd8-03f2-44aa-b3fb-ad0e569c60c2}</UniqueIdentifier>
+    <Filter Include="main\classes\global\function">
+      <UniqueIdentifier>{c5f5c382-b720-46e6-8e97-1491b154f35f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global\utility\object\renderObject\particle\quad">
-      <UniqueIdentifier>{f456b018-617e-4b5b-950e-4dccc5e7473f}</UniqueIdentifier>
+    <Filter Include="main\classes\global\function\gFunc">
+      <UniqueIdentifier>{ebc08e9b-6a9f-4c92-af0c-d0d3605c9ec7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\20 - 노말 매핑">
-      <UniqueIdentifier>{fec21cc6-2144-4d3f-9840-f8b17600257f}</UniqueIdentifier>
+    <Filter Include="main\classes\global\function\pickRay">
+      <UniqueIdentifier>{9733b38e-4c85-433b-95b2-5108ca373e44}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\21 - 환경 매핑">
-      <UniqueIdentifier>{856d1da0-aeaa-41fd-8d7b-34f9723afafc}</UniqueIdentifier>
+    <Filter Include="main\resource">
+      <UniqueIdentifier>{a0a9849d-63ff-45ae-bb96-70973fb49830}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\16 - 스카이박스">
-      <UniqueIdentifier>{5eb69d8f-f3a5-4741-8f35-6a8f9e6ba723}</UniqueIdentifier>
+    <Filter Include="main\resource\shader">
+      <UniqueIdentifier>{73701b02-ea91-413f-9016-9466a591230c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="main\classes\global\utility\object\renderObject\skyBox">
-      <UniqueIdentifier>{024ce915-9c32-4952-bb4e-bb24a2e86d9a}</UniqueIdentifier>
+    <Filter Include="main\resource\texture">
+      <UniqueIdentifier>{1184cecc-6a22-42f5-bddc-549939ee41dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\AA - 그림자 매핑">
-      <UniqueIdentifier>{87297e90-b934-44a1-b7b2-c3d9b5ad6578}</UniqueIdentifier>
+    <Filter Include="main\resource\effect">
+      <UniqueIdentifier>{3d5b0a02-e121-4c8b-8604-0d96aaf5a887}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\22 - 정점 애니메이션%28렌더몽키 참조%29">
-      <UniqueIdentifier>{22f656f0-3c81-4054-8afd-a4e906457722}</UniqueIdentifier>
+    <Filter Include="main\resource\mesh">
+      <UniqueIdentifier>{4dd65e64-3571-4625-8c73-b035a69efb6a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\23 - 외곽선추출, 양각효과">
-      <UniqueIdentifier>{eae7f007-8013-4373-b962-bc42a471c625}</UniqueIdentifier>
+    <Filter Include="main\resource\mesh\Elementalist">
+      <UniqueIdentifier>{fd0c8f1b-4ab7-4eb0-ac70-8a48e26de59a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\24 - 그림자 매핑">
-      <UniqueIdentifier>{d441a6a6-6753-4328-ab0f-3c788f974b67}</UniqueIdentifier>
+    <Filter Include="main\resource\mesh\WitchApprentice">
+      <UniqueIdentifier>{bdf700df-cf18-46ba-8d81-cf685e238ab4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\practice\18 - 그림자 매핑">
-      <UniqueIdentifier>{0e8c8985-83fe-4814-adb7-cd6b685e1e61}</UniqueIdentifier>
+    <Filter Include="practice\20 - 바운드 피킹">
+      <UniqueIdentifier>{558c0f16-9818-4a7c-ba47-289415f74f7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="example\25 - 글로우 효과">
-      <UniqueIdentifier>{c84003dc-224d-4f27-a72a-076a5789a93a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\practice\19 - 백열광 효과">
-      <UniqueIdentifier>{dca1b750-7510-409e-bcab-f63d6c881925}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="example\26 - 충돌">
-      <UniqueIdentifier>{38708747-33f0-4f92-922e-d07c9fa24c83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="main\classes\global\utility\debug\draw">
-      <UniqueIdentifier>{d17c535c-e7fd-4296-96e5-6419def99c34}</UniqueIdentifier>
+    <Filter Include="example\27 - 바운드 피킹">
+      <UniqueIdentifier>{b9325923-24dd-444c-807b-e39c605fbd98}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -385,7 +391,7 @@
       <Filter>main\classes\global\utility\application\windowApplication</Filter>
     </ClInclude>
     <ClInclude Include="practice_00.h">
-      <Filter>example\practice\00</Filter>
+      <Filter>practice\00</Filter>
     </ClInclude>
     <ClInclude Include="example_05.h">
       <Filter>example\05 - 사걱형, 인덱스 버퍼</Filter>
@@ -400,7 +406,7 @@
       <Filter>main\classes\global\utility\manager\input</Filter>
     </ClInclude>
     <ClInclude Include="practice_01.h">
-      <Filter>example\practice\01</Filter>
+      <Filter>practice\01</Filter>
     </ClInclude>
     <ClInclude Include="example_06.h">
       <Filter>example\06 - 계층구조</Filter>
@@ -421,19 +427,19 @@
       <Filter>example\08 - 텍스쳐</Filter>
     </ClInclude>
     <ClInclude Include="practice_03.h">
-      <Filter>example\practice\03 - 텍스쳐 전광판</Filter>
+      <Filter>practice\03 - 텍스쳐 전광판</Filter>
     </ClInclude>
     <ClInclude Include="example_09.h">
       <Filter>example\09 - 광원</Filter>
     </ClInclude>
     <ClInclude Include="practice_04.h">
-      <Filter>example\practice\04 - 셰이딩 밀기</Filter>
+      <Filter>practice\04 - 셰이딩 밀기</Filter>
     </ClInclude>
     <ClInclude Include="example_10.h">
       <Filter>example\10 - 쉐이더</Filter>
     </ClInclude>
     <ClInclude Include="practice_05.h">
-      <Filter>example\practice\05 - 픽셀 셰이더</Filter>
+      <Filter>practice\05 - 픽셀 셰이더</Filter>
     </ClInclude>
     <ClInclude Include="example_11.h">
       <Filter>example\11 - 이펙트 프레임워크</Filter>
@@ -442,7 +448,7 @@
       <Filter>example\12 - 메쉬</Filter>
     </ClInclude>
     <ClInclude Include="practice_06.h">
-      <Filter>example\practice\06 - 메쉬</Filter>
+      <Filter>practice\06 - 메쉬</Filter>
     </ClInclude>
     <ClInclude Include="example_13.h">
       <Filter>example\13 - 알파블렌딩, 스프라이트</Filter>
@@ -460,7 +466,7 @@
       <Filter>main\classes\global\utility\debug\grid</Filter>
     </ClInclude>
     <ClInclude Include="practice_07.h">
-      <Filter>example\practice\07 - 기즈모</Filter>
+      <Filter>practice\07 - 기즈모</Filter>
     </ClInclude>
     <ClInclude Include="renderObject.h">
       <Filter>main\classes\global\utility\object\renderObject\_base</Filter>
@@ -487,13 +493,13 @@
       <Filter>example\17 - 지형</Filter>
     </ClInclude>
     <ClInclude Include="practice_09.h">
-      <Filter>example\practice\09 - 스킨드 메쉬 애니메이션</Filter>
+      <Filter>practice\09 - 스킨드 메쉬 애니메이션</Filter>
     </ClInclude>
     <ClInclude Include="animationController.h">
       <Filter>main\classes\global\utility\animation</Filter>
     </ClInclude>
     <ClInclude Include="practice_10.h">
-      <Filter>example\practice\10 - 애니메이션 블렌드</Filter>
+      <Filter>practice\10 - 애니메이션 블렌드</Filter>
     </ClInclude>
     <ClInclude Include="lightBase.h">
       <Filter>main\classes\global\utility\object\light\_base</Filter>
@@ -508,7 +514,7 @@
       <Filter>main\classes\global\utility\debug\gizmo</Filter>
     </ClInclude>
     <ClInclude Include="practice_11.h">
-      <Filter>example\practice\11 - 지형</Filter>
+      <Filter>practice\11 - 지형</Filter>
     </ClInclude>
     <ClInclude Include="UIBase.h">
       <Filter>main\classes\global\utility\object\UI\_base</Filter>
@@ -517,7 +523,7 @@
       <Filter>main\classes\global\utility\object\terrian</Filter>
     </ClInclude>
     <ClInclude Include="practice_12.h">
-      <Filter>example\practice\12 - 지형 걷기</Filter>
+      <Filter>practice\12 - 지형 걷기</Filter>
     </ClInclude>
     <ClInclude Include="pickRay.h">
       <Filter>main\classes\global\function\pickRay</Filter>
@@ -532,7 +538,7 @@
       <Filter>main\classes\global\utility\manager\sound</Filter>
     </ClInclude>
     <ClInclude Include="practice_13.h">
-      <Filter>example\practice\13 - 사운드</Filter>
+      <Filter>practice\13 - 사운드</Filter>
     </ClInclude>
     <ClInclude Include="example_19.h">
       <Filter>example\19 - 파티클</Filter>
@@ -556,19 +562,19 @@
       <Filter>example\20 - 노말 매핑</Filter>
     </ClInclude>
     <ClInclude Include="practice_15.h">
-      <Filter>example\practice\15 - 매핑</Filter>
+      <Filter>practice\15 - 매핑</Filter>
     </ClInclude>
     <ClInclude Include="example_21.h">
       <Filter>example\21 - 환경 매핑</Filter>
     </ClInclude>
     <ClInclude Include="practice_16.h">
-      <Filter>example\practice\16 - 스카이박스</Filter>
+      <Filter>practice\16 - 스카이박스</Filter>
     </ClInclude>
     <ClInclude Include="skyBox.h">
       <Filter>main\classes\global\utility\object\renderObject\skyBox</Filter>
     </ClInclude>
     <ClInclude Include="practice_AA.h">
-      <Filter>example\practice\AA - 그림자 매핑</Filter>
+      <Filter>practice\AA - 그림자 매핑</Filter>
     </ClInclude>
     <ClInclude Include="example_22.h">
       <Filter>example\22 - 정점 애니메이션%28렌더몽키 참조%29</Filter>
@@ -577,7 +583,7 @@
       <Filter>example\23 - 외곽선추출, 양각효과</Filter>
     </ClInclude>
     <ClInclude Include="practice_18.h">
-      <Filter>example\practice\18 - 그림자 매핑</Filter>
+      <Filter>practice\18 - 그림자 매핑</Filter>
     </ClInclude>
     <ClInclude Include="example_24.h">
       <Filter>example\24 - 그림자 매핑</Filter>
@@ -586,13 +592,19 @@
       <Filter>example\25 - 글로우 효과</Filter>
     </ClInclude>
     <ClInclude Include="practice_19.h">
-      <Filter>example\practice\19 - 백열광 효과</Filter>
+      <Filter>practice\19 - 백열광 효과</Filter>
     </ClInclude>
     <ClInclude Include="example_26.h">
       <Filter>example\26 - 충돌</Filter>
     </ClInclude>
     <ClInclude Include="debugDraw.h">
       <Filter>main\classes\global\utility\debug\draw</Filter>
+    </ClInclude>
+    <ClInclude Include="practice_20.h">
+      <Filter>practice\20 - 바운드 피킹</Filter>
+    </ClInclude>
+    <ClInclude Include="example_27.h">
+      <Filter>example\27 - 바운드 피킹</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -630,7 +642,7 @@
       <Filter>main\classes\global\utility\application\windowApplication</Filter>
     </ClCompile>
     <ClCompile Include="practice_00.cpp">
-      <Filter>example\practice\00</Filter>
+      <Filter>practice\00</Filter>
     </ClCompile>
     <ClCompile Include="example_05.cpp">
       <Filter>example\05 - 사걱형, 인덱스 버퍼</Filter>
@@ -642,7 +654,7 @@
       <Filter>main\classes\global\utility\manager\input</Filter>
     </ClCompile>
     <ClCompile Include="practice_01.cpp">
-      <Filter>example\practice\01</Filter>
+      <Filter>practice\01</Filter>
     </ClCompile>
     <ClCompile Include="example_06.cpp">
       <Filter>example\06 - 계층구조</Filter>
@@ -663,19 +675,19 @@
       <Filter>example\08 - 텍스쳐</Filter>
     </ClCompile>
     <ClCompile Include="practice_03.cpp">
-      <Filter>example\practice\03 - 텍스쳐 전광판</Filter>
+      <Filter>practice\03 - 텍스쳐 전광판</Filter>
     </ClCompile>
     <ClCompile Include="example_09.cpp">
       <Filter>example\09 - 광원</Filter>
     </ClCompile>
     <ClCompile Include="practice_04.cpp">
-      <Filter>example\practice\04 - 셰이딩 밀기</Filter>
+      <Filter>practice\04 - 셰이딩 밀기</Filter>
     </ClCompile>
     <ClCompile Include="example_10.cpp">
       <Filter>example\10 - 쉐이더</Filter>
     </ClCompile>
     <ClCompile Include="practice_05.cpp">
-      <Filter>example\practice\05 - 픽셀 셰이더</Filter>
+      <Filter>practice\05 - 픽셀 셰이더</Filter>
     </ClCompile>
     <ClCompile Include="example_11.cpp">
       <Filter>example\11 - 이펙트 프레임워크</Filter>
@@ -684,7 +696,7 @@
       <Filter>example\12 - 메쉬</Filter>
     </ClCompile>
     <ClCompile Include="practice_06.cpp">
-      <Filter>example\practice\06 - 메쉬</Filter>
+      <Filter>practice\06 - 메쉬</Filter>
     </ClCompile>
     <ClCompile Include="example_13.cpp">
       <Filter>example\13 - 알파블렌딩, 스프라이트</Filter>
@@ -702,7 +714,7 @@
       <Filter>main\classes\global\utility\debug\grid</Filter>
     </ClCompile>
     <ClCompile Include="practice_07.cpp">
-      <Filter>example\practice\07 - 기즈모</Filter>
+      <Filter>practice\07 - 기즈모</Filter>
     </ClCompile>
     <ClCompile Include="renderObject.cpp">
       <Filter>main\classes\global\utility\object\renderObject\_base</Filter>
@@ -729,13 +741,13 @@
       <Filter>example\17 - 지형</Filter>
     </ClCompile>
     <ClCompile Include="practice_09.cpp">
-      <Filter>example\practice\09 - 스킨드 메쉬 애니메이션</Filter>
+      <Filter>practice\09 - 스킨드 메쉬 애니메이션</Filter>
     </ClCompile>
     <ClCompile Include="animationController.cpp">
       <Filter>main\classes\global\utility\animation</Filter>
     </ClCompile>
     <ClCompile Include="practice_10.cpp">
-      <Filter>example\practice\10 - 애니메이션 블렌드</Filter>
+      <Filter>practice\10 - 애니메이션 블렌드</Filter>
     </ClCompile>
     <ClCompile Include="lightBase.cpp">
       <Filter>main\classes\global\utility\object\light\_base</Filter>
@@ -750,7 +762,7 @@
       <Filter>main\classes\global\utility\debug\gizmo</Filter>
     </ClCompile>
     <ClCompile Include="practice_11.cpp">
-      <Filter>example\practice\11 - 지형</Filter>
+      <Filter>practice\11 - 지형</Filter>
     </ClCompile>
     <ClCompile Include="UIBase.cpp">
       <Filter>main\classes\global\utility\object\UI\_base</Filter>
@@ -759,7 +771,7 @@
       <Filter>main\classes\global\utility\object\terrian</Filter>
     </ClCompile>
     <ClCompile Include="practice_12.cpp">
-      <Filter>example\practice\12 - 지형 걷기</Filter>
+      <Filter>practice\12 - 지형 걷기</Filter>
     </ClCompile>
     <ClCompile Include="pickRay.cpp">
       <Filter>main\classes\global\function\pickRay</Filter>
@@ -774,7 +786,7 @@
       <Filter>main\classes\global\utility\manager\sound</Filter>
     </ClCompile>
     <ClCompile Include="practice_13.cpp">
-      <Filter>example\practice\13 - 사운드</Filter>
+      <Filter>practice\13 - 사운드</Filter>
     </ClCompile>
     <ClCompile Include="example_19.cpp">
       <Filter>example\19 - 파티클</Filter>
@@ -798,19 +810,19 @@
       <Filter>example\20 - 노말 매핑</Filter>
     </ClCompile>
     <ClCompile Include="practice_15.cpp">
-      <Filter>example\practice\15 - 매핑</Filter>
+      <Filter>practice\15 - 매핑</Filter>
     </ClCompile>
     <ClCompile Include="example_21.cpp">
       <Filter>example\21 - 환경 매핑</Filter>
     </ClCompile>
     <ClCompile Include="practice_16.cpp">
-      <Filter>example\practice\16 - 스카이박스</Filter>
+      <Filter>practice\16 - 스카이박스</Filter>
     </ClCompile>
     <ClCompile Include="skyBox.cpp">
       <Filter>main\classes\global\utility\object\renderObject\skyBox</Filter>
     </ClCompile>
     <ClCompile Include="practice_AA.cpp">
-      <Filter>example\practice\AA - 그림자 매핑</Filter>
+      <Filter>practice\AA - 그림자 매핑</Filter>
     </ClCompile>
     <ClCompile Include="example_22.cpp">
       <Filter>example\22 - 정점 애니메이션%28렌더몽키 참조%29</Filter>
@@ -819,7 +831,7 @@
       <Filter>example\23 - 외곽선추출, 양각효과</Filter>
     </ClCompile>
     <ClCompile Include="practice_18.cpp">
-      <Filter>example\practice\18 - 그림자 매핑</Filter>
+      <Filter>practice\18 - 그림자 매핑</Filter>
     </ClCompile>
     <ClCompile Include="example_24.cpp">
       <Filter>example\24 - 그림자 매핑</Filter>
@@ -828,13 +840,19 @@
       <Filter>example\25 - 글로우 효과</Filter>
     </ClCompile>
     <ClCompile Include="practice_19.cpp">
-      <Filter>example\practice\19 - 백열광 효과</Filter>
+      <Filter>practice\19 - 백열광 효과</Filter>
     </ClCompile>
     <ClCompile Include="example_26.cpp">
       <Filter>example\26 - 충돌</Filter>
     </ClCompile>
     <ClCompile Include="debugDraw.cpp">
       <Filter>main\classes\global\utility\debug\draw</Filter>
+    </ClCompile>
+    <ClCompile Include="practice_20.cpp">
+      <Filter>practice\20 - 바운드 피킹</Filter>
+    </ClCompile>
+    <ClCompile Include="example_27.cpp">
+      <Filter>example\27 - 바운드 피킹</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

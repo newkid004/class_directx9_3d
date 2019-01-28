@@ -77,6 +77,7 @@ void direct3dApplication::drawUI(void)
 		MN_TIME->getDeltaTime(),
 		MN_TIME->getRunningTime());
 
+	_label->setPosition(D3DXVECTOR3(0.0f, 0.0f, 0.0f));
 	_label->setText(text);
 	_label->drawUI();
 }

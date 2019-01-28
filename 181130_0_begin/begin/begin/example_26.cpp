@@ -7,7 +7,7 @@
 
 constexpr int DEBUG_TYPE_BOX = 1;
 constexpr int DEBUG_TYPE_SPHERE = 2;
-constexpr int DEBUG_TYPE = DEBUG_TYPE_SPHERE;
+constexpr int DEBUG_TYPE = DEBUG_TYPE_BOX;
 
 example_26::example_26(HINSTANCE hInstance, const SIZE & windowSize, int option) :
 	direct3dApplication(hInstance, windowSize, option)
@@ -16,6 +16,8 @@ example_26::example_26(HINSTANCE hInstance, const SIZE & windowSize, int option)
 
 example_26::~example_26()
 {
+	SAFE_DELETE(_staticMesh);
+	SAFE_DELETE(_staticMeshA);
 }
 
 void example_26::init(void)
@@ -26,18 +28,67 @@ void example_26::init(void)
 	_meshBox = createMeshBox(_bBox);
 
 	_staticMesh = createStaticMesh();
+	_staticMesh->setScale(0.2f);
+	_staticMesh->setPosition(D3DXVECTOR3(-10.0f, 0.0f, 0.0f));
+
+	_staticMeshA = createStaticMesh();
+	_staticMeshA->setScale(0.2f);
+	_staticMeshA->setPosition(D3DXVECTOR3(10.0f, 0.0f, 0.0f));
 
 	switch (DEBUG_TYPE)
 	{
-	case DEBUG_TYPE_BOX: _staticMesh->setDebugEnalbe(true, EDebugDrawType::BOX); break;
-	case DEBUG_TYPE_SPHERE: _staticMesh->setDebugEnalbe(true, EDebugDrawType::SPHERE); break;
+	case DEBUG_TYPE_BOX: {
+		_staticMesh->setDebugEnalbe(true, EDebugDrawType::BOX);
+		_staticMeshA->setDebugEnalbe(true, EDebugDrawType::BOX);
+	} break;
+
+	case DEBUG_TYPE_SPHERE: {
+		_staticMesh->setDebugEnalbe(true, EDebugDrawType::SPHERE);
+		_staticMeshA->setDebugEnalbe(true, EDebugDrawType::SPHERE);
+	} break;
 	}
-	
 }
 
 void example_26::update(void)
 {
 	direct3dApplication::update();
+
+	_staticMesh->update();
+	_staticMeshA->update();
+
+	if (MN_KEY->keyDown(DIK_LEFT))	_staticMesh->moveX(10.0f * -MN_TIME->getDeltaTime());
+	if (MN_KEY->keyDown(DIK_RIGHT))	_staticMesh->moveX(10.0f * MN_TIME->getDeltaTime());
+	if (MN_KEY->keyDown(DIK_UP))	_staticMesh->moveZ(10.0f * MN_TIME->getDeltaTime());
+	if (MN_KEY->keyDown(DIK_DOWN))	_staticMesh->moveZ(10.0f * -MN_TIME->getDeltaTime());
+
+	switch (DEBUG_TYPE)
+	{
+	case DEBUG_TYPE_BOX: {
+		boundingBox bound;
+		boundingBox boundA;
+		_staticMesh->getBoundingBoxFinal(&bound);
+		_staticMeshA->getBoundingBoxFinal(&boundA);
+
+		if (gFunc::isIntersect(bound, boundA))
+		{
+			static int count = 0;
+			printf("충돌 %d\n", ++count);
+		}
+	} break;
+
+	case DEBUG_TYPE_SPHERE: {
+		boundingSphere bound;
+		boundingSphere boundA;
+		_staticMesh->getBoundingSphereFinal(&bound);
+		_staticMeshA->getBoundingSphereFinal(&boundA);
+
+		if (gFunc::isIntersect(bound, boundA))
+		{
+			static int count = 0;
+			printf("충돌 %d\n", ++count);
+		}
+	} break;
+	}
 }
 
 void example_26::draw(void)
@@ -45,6 +96,7 @@ void example_26::draw(void)
 	direct3dApplication::draw();
 
 	_staticMesh->draw();
+	_staticMeshA->draw();
 /*
 	MN_DEV->SetRenderState(D3DRS_LIGHTING, FALSE);
 	MN_DEV->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);

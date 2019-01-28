@@ -15,6 +15,8 @@ protected:
 	boundingBox _bBox;
 	boundingSphere _bSphere;
 
+	objectBox _oBox;
+
 	debugDraw* _debugDraw = nullptr;
 
 public :	// iterface
@@ -34,6 +36,8 @@ public:
 	constexpr boundingSphere & getBoundingSphere(void) { return _bSphere; }
 	void getBoundingBoxFinal(boundingBox * out);
 	void getBoundingSphereFinal(boundingSphere * out);
+	void getObjectBox(objectBox * out);
+	debugDraw* getDebugDraw(void) { return _debugDraw; }
 
 	void setVisible(bool input) { _isVisible = input; }
 	void setDebugEnalbe(bool input, EDebugDrawType drawType = EDebugDrawType::BOX);

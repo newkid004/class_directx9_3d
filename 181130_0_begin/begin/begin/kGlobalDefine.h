@@ -139,14 +139,7 @@ struct meshSet
 	std::vector<LPDIRECT3DTEXTURE9> vTextureList;
 };
 
-// ±¤¼±
-struct pRay
-{
-	D3DXVECTOR3 origin;
-	D3DXVECTOR3 direction;
-};
-
-// Ãæµ¹
+// °æ°è º¼·ý
 struct boundingBox
 {
 	D3DXVECTOR3 min;
@@ -157,4 +150,13 @@ struct boundingSphere
 {
 	D3DXVECTOR3 center;
 	float radius = 0.0f;
+};
+
+// °´Ã¼ º¼·ý
+struct objectBox
+{
+	float halfLength[3];
+
+	D3DXVECTOR3 center;
+	D3DXVECTOR3 direction[3];
 };

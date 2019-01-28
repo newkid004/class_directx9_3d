@@ -12,6 +12,7 @@ private :
 	LPD3DXMESH _meshSphere = nullptr;
 
 	staticMesh* _staticMesh = nullptr;
+	staticMesh* _staticMeshA = nullptr;
 
 	boundingBox _bBox;
 	boundingSphere _bSphere;

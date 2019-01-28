@@ -117,7 +117,7 @@ LPD3DXMESH gFunc::createMesh(int faceSize, int vertexSize, DWORD options, D3DVER
 	return result;
 }
 
-pRay gFunc::createPickRay(const POINT & clickPos)
+pick::ray gFunc::createPickRay(const POINT & clickPos)
 {
 	// 뷰 -> 투영 변환
 	D3DVIEWPORT9 viewPort;
@@ -128,14 +128,14 @@ pRay gFunc::createPickRay(const POINT & clickPos)
 		((clickPos.y * -2.0f) / viewPort.Height) + 1.0f);
 
 	// 투영 -> 뷰 변환
-	D3DXMATRIXA16* mProjection = GET_CAMERA()->getMatrixProjectionPoint();
+	D3DXMATRIXA16 & mProjection = GET_CAMERA()->getMatrixProjection();
 
-	pRay ray;
+	pick::ray ray;
 	ZeroMemory(&ray, sizeof(ray));
 
 	ray.direction = D3DXVECTOR3(
-		normalizePos.x / mProjection->_11,
-		normalizePos.y / mProjection->_22,
+		normalizePos.x / mProjection._11,
+		normalizePos.y / mProjection._22,
 		1.0f);
 
 	// 뷰 -> 월드 변환
@@ -211,4 +211,63 @@ float gFunc::rndFloat(float min, float max)
 	uniform_real_distribution<float> uRandom(min, max);
 
 	return uRandom(rDevice);
+}
+
+bool gFunc::isIntersect(const boundingBox & boundA, const boundingBox & boundB)
+{
+	if (boundB.max.x < boundA.min.x || boundA.max.x < boundB.min.x ||
+		boundB.max.y < boundA.min.y || boundA.max.y < boundB.min.y ||
+		boundB.max.z < boundA.min.z || boundA.max.z < boundB.min.z)
+		return false;
+
+	return true;
+}
+
+bool gFunc::isIntersect(const boundingSphere & boundA, const boundingSphere & boundB)
+{
+	auto distance = boundA.center - boundB.center;
+	return D3DXVec3Length(&distance) <= boundA.radius + boundB.radius;
+}
+
+void gFunc::obj2bound(boundingBox * outBoundingBox, objectBox * inObjectBox)
+{
+	ZeroMemory(outBoundingBox, sizeof(boundingBox));
+	
+	D3DXVECTOR3 & center = inObjectBox->center;
+	D3DXVECTOR3 direction[] = {
+		inObjectBox->direction[0] * inObjectBox->halfLength[0],
+		inObjectBox->direction[1] * inObjectBox->halfLength[1],
+		inObjectBox->direction[2] * inObjectBox->halfLength[2]
+	};
+
+	// 경계 볼륨
+	D3DXVECTOR3 vertices[] = {
+		center + direction[0] + direction[1] + direction[2],
+		center + direction[0] - direction[1] + direction[2],
+		center - direction[0] + direction[1] + direction[2],
+		center - direction[0] - direction[1] + direction[2],
+
+		center + direction[0] + direction[1] - direction[2],
+		center + direction[0] - direction[1] - direction[2],
+		center - direction[0] + direction[1] - direction[2],
+		center - direction[0] - direction[1] - direction[2]
+	};
+
+	outBoundingBox->min = center;
+	outBoundingBox->max = center;
+
+	// 위치 계산
+	for (int i = 0; i < sizeof(vertices) / sizeof(vertices[0]); ++i)
+	{
+		D3DXVECTOR3 & v = vertices[i];
+
+		if (v.x <	outBoundingBox->min.x)	outBoundingBox->min.x = v.x;
+		if (v.x >=	outBoundingBox->max.x)	outBoundingBox->max.x = v.x;
+
+		if (v.y <	outBoundingBox->min.y)	outBoundingBox->min.y = v.y;
+		if (v.y >=	outBoundingBox->max.y)	outBoundingBox->max.y = v.y;
+
+		if (v.z <	outBoundingBox->min.z)	outBoundingBox->min.z = v.z;
+		if (v.z >=	outBoundingBox->max.z)	outBoundingBox->max.z = v.z;
+	}
 }

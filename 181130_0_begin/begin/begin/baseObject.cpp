@@ -47,6 +47,7 @@ void baseObject::update(void)
 
 	// world
 	_mWorld = _mOffset * mScalse * mRotation * mTranslation;
+	putOffsetPosition();
 
 	// 자식 갱신
 	for (auto childObject : _vChildren)
@@ -254,17 +255,17 @@ void baseObject::setRotation(const D3DXVECTOR3 & input)
 	CopyMemory(&_directionForward,	&mRotation(2, 0), sizeof(D3DXVECTOR3));
 }
 
-D3DXVECTOR3 baseObject::getOffsetPosition(void)
+void baseObject::setParent(baseObject* input)
+{
+	assert(_parent == NULL);
+	_parent = input;
+}
+
+void baseObject::putOffsetPosition(void)
 {
 	D3DXMATRIXA16 mRotation = getMatrixRotate();
 	D3DXVECTOR3 offset = getOffset();
 	D3DXVec3TransformCoord(&offset, &offset, &mRotation);
 
-	return _position - offset;
-}
-
-void baseObject::setParent(baseObject* input)
-{
-	assert(_parent == NULL);
-	_parent = input;
+	_offsetPosition = _position - offset;
 }

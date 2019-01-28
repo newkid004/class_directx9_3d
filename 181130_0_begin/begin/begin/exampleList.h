@@ -26,6 +26,7 @@
 #include "example_24.h"
 #include "example_25.h"
 #include "example_26.h"
+#include "example_27.h"
 
 #include "practice_00.h"
 #include "practice_01.h"
@@ -43,5 +44,6 @@
 #include "practice_16.h"
 #include "practice_18.h"
 #include "practice_19.h"
+#include "practice_20.h"
 
 #include "practice_AA.h"

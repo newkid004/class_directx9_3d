@@ -1,9 +1,11 @@
 #include "staticMesh.h"
 
-#include "camera.h"
-#include "direct3dApplication.h"
 #include "managerList.h"
+#include "direct3dApplication.h"
 #include "gFunc.h"
+
+#include "camera.h"
+#include "lightBase.h"
 
 staticMesh::staticMesh()
 {
@@ -31,6 +33,9 @@ void staticMesh::drawDo(void)
 	_effect->SetMatrix("_mWorld", &getMatrixFinal());
 	_effect->SetMatrix("_mView", GET_CAMERA()->getMatrixViewPoint());
 	_effect->SetMatrix("_mProjection", GET_CAMERA()->getMatrixProjectionPoint());
+
+	_effect->SetVector("_lightDirection", &D3DXVECTOR4(GET_LIGHT()->getDirectForward(), 0.0f));
+	_effect->SetVector("_viewPosition", &D3DXVECTOR4(GET_CAMERA()->getOffsetPosition(), 1.0f));
 
 	for (int i = 0; i < _info->numMaterial; ++i)
 	{

@@ -57,7 +57,41 @@ void renderObject::getBoundingSphereFinal(boundingSphere * out)
 		&_bSphere.center,
 		&mWorld);
 
-	out->radius = max(max(mWorld(0, 0), mWorld(1, 1)), mWorld(2, 2));
+	out->radius = _bSphere.radius *
+		max(max(
+			mWorld(0, 0), 
+			mWorld(1, 1)), 
+			mWorld(2, 2));
+}
+
+void renderObject::getObjectBox(objectBox * out)
+{
+	ZeroMemory(out, sizeof(objectBox));
+
+	D3DXMATRIXA16 mWorldF = this->getMatrixFinal();
+	boundingBox bound;
+	this->getBoundingBoxFinal(&bound);
+
+	// 중점
+	out->center = (bound.min + bound.max) / 2.0f;
+
+	// 축
+	CopyMemory(out->direction + 0, &mWorldF(0, 0), sizeof(D3DXVECTOR3));
+	CopyMemory(out->direction + 1, &mWorldF(1, 0), sizeof(D3DXVECTOR3));
+	CopyMemory(out->direction + 2, &mWorldF(2, 0), sizeof(D3DXVECTOR3));
+
+	D3DXVec3Normalize(out->direction + 0, out->direction + 0);
+	D3DXVec3Normalize(out->direction + 1, out->direction + 1);
+	D3DXVec3Normalize(out->direction + 2, out->direction + 2);
+
+	// 길이
+	for (int i = 0; i < 3; ++i)
+	{
+		auto distance = bound.max - bound.min;
+		auto & wDir = out->direction[i];
+
+		out->halfLength[i] = fabsf(D3DXVec3Dot(&distance, &wDir) / 2.0f);
+	}
 }
 
 void renderObject::setDebugEnalbe(bool input, EDebugDrawType drawType)

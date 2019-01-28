@@ -17,6 +17,8 @@ protected :
 	D3DXMATRIXA16 _mWorld;
 	D3DXMATRIXA16 _mOffset;
 
+	D3DXVECTOR3 _offsetPosition;
+
 public :	// interface
 	virtual void update(void) override;
 
@@ -44,19 +46,19 @@ public :
 	void normalizeAxis(void);
 
 public :	// 접근, 지정자
-	D3DXMATRIXA16* getMatrixWorldPoint (void) { return &_mWorld; }
-	D3DXMATRIXA16 getMatrixWorld	(void) { return _mWorld; }
-	D3DXMATRIXA16 getMatrixFinal	(void);
-	D3DXMATRIXA16 getMatrixRotate	(void);
+	D3DXMATRIXA16* getMatrixWorldPoint		(void) { return &_mWorld; }
+	D3DXMATRIXA16 getMatrixWorld			(void) { return _mWorld; }
+	D3DXMATRIXA16 getMatrixFinal			(void);
+	D3DXMATRIXA16 getMatrixRotate			(void);
 
-	D3DXVECTOR3 getPosition			(void) { return _position; }
-	D3DXVECTOR3 getScale			(void) { return _scale; }
-	D3DXVECTOR3 getDirectRight		(void) { return _directionRight; }
-	D3DXVECTOR3 getDirectUp			(void) { return _directionUp; }
-	D3DXVECTOR3 getDirectForward	(void) { return _directionForward; }
+	const D3DXVECTOR3 & getPosition			(void) { return _position; }
+	const D3DXVECTOR3 & getScale			(void) { return _scale; }
+	const D3DXVECTOR3 & getDirectRight		(void) { return _directionRight; }
+	const D3DXVECTOR3 & getDirectUp			(void) { return _directionUp; }
+	const D3DXVECTOR3 & getDirectForward	(void) { return _directionForward; }
 	
-	D3DXVECTOR3 getOffset			(void) { return D3DXVECTOR3(_mOffset(3, 0), _mOffset(3, 1), _mOffset(3, 2)); }
-	D3DXVECTOR3 getOffsetPosition	(void);
+	D3DXVECTOR3 getOffset					(void) { return D3DXVECTOR3(_mOffset(3, 0), _mOffset(3, 1), _mOffset(3, 2)); }
+	constexpr D3DXVECTOR3 & getOffsetPosition(void) { return _offsetPosition; }
 	
 	// 지정자
 	void setParent					(baseObject* input);
@@ -70,6 +72,9 @@ public :	// 접근, 지정자
 	void setDirectionForward		(const D3DXVECTOR3 & input) { _directionForward = input; }
 
 	void setMatrixOffset			(const D3DXMATRIXA16 & input) { _mOffset = input; }
+
+private :
+	void putOffsetPosition			(void);
 
 public:
 	baseObject();

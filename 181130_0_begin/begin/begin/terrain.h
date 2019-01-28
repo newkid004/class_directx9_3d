@@ -1,6 +1,7 @@
 #pragma once
 #include "kGlobalDefine.h"
 #include "renderObject.h" 
+#include "pickRay.h"
 
 using namespace std;
 
@@ -67,7 +68,7 @@ public :
 	LPD3DXMESH getMesh(void) { return _mesh; }
 	void setRunTechnique(const std::string & input) { _runTechnique = input; }
 
-	bool getIntersectPoint(const pRay & ray, D3DXVECTOR3 & out_position);
+	bool getIntersectPoint(const pick::ray & ray, D3DXVECTOR3 & out_position);
 
 public:
 	terrain(const params & param);
